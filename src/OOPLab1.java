@@ -6,5 +6,17 @@ public class OOPLab1 {
         int noOfSnacks;
 
         Scanner input = new Scanner(System.in);
+
+        System.out.print("Please enter your name: ");
+        name = input.nextLine();
+
+        System.out.print("Please enter your class name: ");
+        className = input.nextLine();
+
+        System.out.print("Please enter the amount of snacks: ");
+        noOfSnacks = input.nextInt();
+
+        System.out.print("\n\nName: " + name + "\nClass: " + className + "\nNumber of snacks: " +
+                noOfSnacks + "\nThe price is: " + noOfSnacks*2);
     }
 }
