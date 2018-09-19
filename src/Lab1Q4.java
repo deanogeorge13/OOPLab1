@@ -2,24 +2,32 @@ import java.util.Scanner;
 
 public class Lab1Q4 {
     public static void main(String[] args) {
-        int  total=0, entries=0, number=0;
-        String numberEntered="";
+        int  total=0, entries=0, number;
+        String numberEntered;
 
         Scanner input = new Scanner(System.in);
 
+        System.out.print("Enter a number: (q to quit)");
+        numberEntered = input.nextLine();
+
         while(!numberEntered.equals("q"))
         {
-            if(!numberEntered.equals("q")) {
-                System.out.print("Grand total: " + total + "\n\nNumber of entries: " + entries);
-            }
-
-            System.out.print("Enter a number: ");
-            numberEntered = input.nextLine();
-            //number = Integer.parseInt(numberEntered);
-
+            number = Integer.parseInt(numberEntered);
             entries++;
+
+            total+=number;
+
+            System.out.print("Enter a number: (q to quit)");
+            numberEntered = input.nextLine();
+
+
+
+
         }
 
+
+
+        System.out.print("\nGrand total: " + total + "\n\nNumber of entries: " + entries);
 
 
 
